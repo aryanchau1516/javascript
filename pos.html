@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript If-Else User Input Example</title>
+</head>
+<body>
+
+  <h1>JavaScript If-Else User Input Example</h1>
+
+  <label for="userInput">Enter a number:</label>
+  <input type="text" id="userInput">
+  <button onclick="checkInput()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkInput() {
+      // Get the user input
+      var userInput = document.getElementById('userInput').value;
+
+      // Check if the input is a number
+      if (!isNaN(userInput)) {
+        // Convert the input to a number for comparison
+        var number = parseFloat(userInput);
+
+        // If-else statement
+        if (number > 0) {
+          document.getElementById('result').innerHTML = 'The number is positive.';
+        } else if (number < 0) {
+          document.getElementById('result').innerHTML = 'The number is negative.';
+        } else {
+          document.getElementById('result').innerHTML = 'The number is zero.';
+        }
+      } else {
+        document.getElementById('result').innerHTML = 'Please enter a valid number.';
+      }
+    }
+  </script>
+
+</body>
+</html>

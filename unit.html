@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENTER THE UNI AND IND CHARGE</title>
+</head>
+<body>
+
+  <h1>JavaScript Unit Charge  If-Else User Input Example</h1>
+
+  <label for="userInput">Enter The Unit :</label>
+  <input type="text" id="userInput">
+  <button onclick="checkInput()">Charge</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkInput() {
+      
+      var userInput = document.getElementById('userInput').value;
+
+      
+      if (!isNaN(userInput)) {
+        
+        var Unit = parseFloat(userInput);
+
+        // If-else condition for unit charge..
+        if (Unit<=150) {
+            charge=100;
+          document.getElementById('result').innerHTML = 'CHARGE = 100';
+        } else if (Unit <=250) {
+          document.getElementById('result').innerHTML = charge=100+((Unit-150)*.50);
+        } else if(Unit<=350) {
+          document.getElementById('result').innerHTML = charge=100+50+((Unit-250)*.80);
+        }
+       else  {
+        document.getElementById('result').innerHTML = charge=100+50+80+((Unit-350)*1.20);
+      }}
+    }
+  </script>
+
+</body>
+</html>
